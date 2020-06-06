@@ -1,0 +1,16 @@
+.HomeNav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.line{
+    height: 1px;
+    flex: 6;
+    background: white;
+}
+.tabLink{
+    flex: 1;
+}
+.tabLink:hover{
+    color: white;
+}

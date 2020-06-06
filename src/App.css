@@ -1,0 +1,53 @@
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-col{
+  display: flex;
+  align-items: center;
+  justify-content: center;flex-flow: column;
+}
+
+.heading1{
+  font-size: 7rem;
+}
+.heading2{
+  font-size: 6rem;
+}
+.heading3{
+  font-size: 5rem;
+}
+.heading4{
+  font-size: 4rem;
+}
+.heading3{
+  font-size: 3rem;
+}
+.heading4{
+  font-size: 2.5rem;
+}
+.para1{
+  font-size: 2rem;
+}
+.para2{
+  font-size: 1.8rem;
+}
+.para3{
+  font-size: 1.5rem;
+}
+.lighter{
+  font-weight: lighter;
+}
+.bolder{
+  font-weight: bolder;
+}
+.white{
+  color: white;
+}
+.black{
+  color: black;
+}
+.pointer{
+  cursor: pointer;
+}

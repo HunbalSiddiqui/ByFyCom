@@ -1,0 +1,44 @@
+*{
+    border: 0;padding: 0;margin: 0;
+}
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.html{
+  font-size: 62.5%;
+} 
+.home_container3{
+    display: none;
+    grid-template-columns:100vw;
+    grid-template-rows: 100vh;
+    background-image: url(./imgs/womenCloth.jpg);
+    background-size: 100% 100%,cover;
+    grid-template-areas: 'home_wrapper';
+}
+.home_wrapper{
+    grid-area: home_wrapper;
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-areas: 'homeNav homeNav homeNav'
+                         'homePrev homeMain homeNext';
+}
+.homeNav{
+    grid-area: homeNav;
+}
+.homePrev{
+    grid-area: homePrev;
+}
+.homeMain{
+    grid-area: homeMain;
+}
+.homeNext{
+    grid-area: homeNext;
+}
+.Nextpg:hover{
+    color: white;
+}
+.Prevpg:hover{
+    color: white;
+}
