@@ -109,9 +109,12 @@ export class Home extends Component {
                     </div>
                     <div className="homePrev flex-col"><p className="Prevpg para3 lighter pointer" ><i className="fas fa-chevron-left" id='prev'
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
-                    <div className="homeMain"></div>
+                    <div className="homeMain">
+                        <button className="shopnow1 lighter pointer">SHOP NOW</button>
+                    </div>
                     <div className="homeNext flex-col"><p className="Nextpg para3 lighter pointer"><i className="fas fa-chevron-right" id='next'
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
+                    <div className="tagLine flex white"><p>- Shoes -</p></div>
                 </div>
             </div>
 
@@ -122,9 +125,12 @@ export class Home extends Component {
                     </div>
                     <div className="homePrev flex-col"><p className="Prevpg para3 lighter pointer" id='prev'><i className="fas fa-chevron-left" id="prev"
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
-                    <div className="homeMain"></div>
+                    <div className="homeMain">
+                        <button className="shopnow2 lighter pointer">SHOP NOW</button>
+                    </div>
                     <div className="homeNext flex-col"><p className="Nextpg para3 lighter pointer" id='next'><i className="fas fa-chevron-right" id="next"
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
+                    <div className="tagLine flex white"><p>- T.Shirts(Men) -</p></div>
                 </div>
             </div>
 
@@ -133,11 +139,14 @@ export class Home extends Component {
                     <div className="homeNav">
                         <HomeNav/>
                     </div>
-                    <div className="homePrev flex-col"><p className="Prevpg para3 lighter pointer" id='prev'><i className="fas fa-chevron-left" id='prev'
+                    <div className="homePrev flex-col"><p className="Prevpg para3 lighter pointer" id='prev'><i className="fas fa-chevron-left white" id='prev'
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
-                    <div className="homeMain"></div>
-                    <div className="homeNext flex-col"><p className="Nextpg para3 lighter pointer" id='next'><i className="fas fa-chevron-right" id='next'
+                    <div className="homeMain">
+                        <button className="shopnow3 lighter pointer">SHOP NOW</button>
+                    </div>
+                    <div className="homeNext flex-col"><p className="Nextpg para3 lighter pointer" id='next'><i className="fas fa-chevron-right white" id='next'
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
+                    <div className="tagLine flex white"><p>- T.Shirts(Women) -</p></div>
                 </div>
             </div>
 

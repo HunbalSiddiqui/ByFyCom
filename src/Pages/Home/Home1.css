@@ -19,10 +19,14 @@ body{
 .home_wrapper{
     grid-area: home_wrapper;
     display: grid;
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 10vh 80vh 10vh;
     grid-template-columns: 5vw 90vw 5vw;
     grid-template-areas: 'homeNav homeNav homeNav'
-                         'homePrev homeMain homeNext';
+                         'homePrev homeMain homeNext'
+                         'tagLine tagLine tagLine';
+}
+.tagLine{
+    grid-area: tagLine;
 }
 .homeNav{
     grid-area: homeNav;
@@ -41,4 +45,15 @@ body{
 }
 .Prevpg:hover{
     color: white;
+}
+
+
+.shopnow1{
+    border-radius: 100%;
+    width: 5rem;height: 5rem;
+    background-color: transparent;border: 1px solid white;
+    color: whitesmoke;
+}
+.shopnow1:hover{
+    border: 2px solid white;    
 }
