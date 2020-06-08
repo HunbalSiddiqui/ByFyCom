@@ -21,7 +21,9 @@ export class Home extends Component {
                 await this.setState((prevState)=>({
                     pgCounter:prevState.pgCounter+1
                 }))
+                // eslint-disable-next-line 
                 var container1 = document.querySelector(`.home_container1`);
+                // eslint-disable-next-line 
                 var container2 = document.querySelector('.home_container2');
                 container2.style.display = 'grid'
                 container1.style.transition = '0.7s ease-in'
@@ -38,7 +40,9 @@ export class Home extends Component {
                 await this.setState((prevState)=>({
                     pgCounter:prevState.pgCounter+1
                 }))
+                // eslint-disable-next-line 
                 var home_container1 = document.querySelector(`.home_container2`);
+                // eslint-disable-next-line 
                 var home_container2 = document.querySelector('.home_container3');
                 home_container2.style.display = 'grid'
                 home_container1.style.transition = '0.7s ease-in'
@@ -64,7 +68,9 @@ export class Home extends Component {
                 await this.setState((prevState)=>({
                     pgCounter:prevState.pgCounter-1
                 }))
+                // eslint-disable-next-line no-redeclare
                 var container1 = document.querySelector(`.home_container2`);
+                // eslint-disable-next-line 
                 var container2 = document.querySelector('.home_container1');
                 container2.style.display = 'grid'
                 container1.style.transition = '0.7s ease-in'
@@ -83,7 +89,9 @@ export class Home extends Component {
                 await this.setState((prevState)=>({
                     pgCounter:prevState.pgCounter-1
                 }))
+                // eslint-disable-next-line 
                 var container1 = document.querySelector(`.home_container3`);
+                // eslint-disable-next-line 
                 var container2 = document.querySelector('.home_container2');
                 container2.style.display = 'grid'
                 container1.style.transition = '0.7s ease-in'
@@ -100,6 +108,7 @@ export class Home extends Component {
     }
 
     render() {
+        // eslint-disable-next-line 
         var {pgCounter} = this.state
         return (
         <div className="home_container">    
