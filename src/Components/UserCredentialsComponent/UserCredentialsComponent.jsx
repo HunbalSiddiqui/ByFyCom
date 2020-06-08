@@ -68,7 +68,7 @@ export class UserCredentialsComponent extends Component {
                 <div className="ucr2 flex">
                     <form className="flex-col">
                         <input onChange={(e)=>{this.handleFormInput(e)}} name='username' value={username} className="input_field" type="text" placeholder="UserName"/>
-                        <input onChange={(e)=>{this.handleFormInput(e)}} name='email' value={email} id="signup_hide" className="input_field" type="email" placeholder="Email"/>
+                        <input onChange={(e)=>{this.handleFormInput(e)}} name='email' value={email} id="signup_hide" className="input_field" type="text" placeholder="Email"/>
                         <input onChange={(e)=>{this.handleFormInput(e)}} name='mobile' value={mobile} id="signup_hide" className="input_field" type="number" placeholder="MobileNumber"/>
                         <input onChange={(e)=>{this.handleFormInput(e)}} name='address' value={address} id="signup_hide" className="input_field" type="text" placeholder="Address"/>
                         <input onChange={(e)=>{this.handleFormInput(e)}} name='password' value={password} className="input_field" type="password" placeholder="Password"/>

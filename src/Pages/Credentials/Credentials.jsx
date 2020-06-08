@@ -2,7 +2,23 @@ import React, { Component } from 'react'
 import './Credentials.css'
 import UserCredentialsComponent from '../../Components/UserCredentialsComponent/UserCredentialsComponent'
 import {Link} from 'react-router-dom'
+import { auth } from '../../Firebase/Firebase'
 export class Credentials extends Component {
+    state = {
+        flag :true
+    }
+    componentDidMount() {
+        auth.onAuthStateChanged(async(user)=>{
+            if(user)
+            {
+                //redirect user to home page.
+                this.props.history.push('/')
+            }
+        })
+    }
+    
+
+
     render() {
         return (
             <div className="credentials_cont">
