@@ -1,9 +1,9 @@
-import { USER_SIGNUP } from "./userConstants"
 import { serverTimestamp, firestore, auth } from "../../Firebase/Firebase";
+import { SET_CURRENT_USER } from "./userConstants";
 
 export var setCurrentUer=(userObj)=>{
     return{
-        type:USER_SIGNUP,
+        type:SET_CURRENT_USER,
         payload:userObj
     }
 }
@@ -30,9 +30,9 @@ export var userSignup=(userObj)=>{
 }
 
 export var userSignin=(userObj)=>{
-    
+    var {email,password} = userObj
     return async(Dispatch)=>{
-
+        await auth.signInWithEmailAndPassword(email,password)
     }
 }
 
@@ -42,7 +42,7 @@ export var userSignout=()=>{
     return async(Dispatch)=>{
         //signout
         await auth.signOut();
-        //set local state to null
-        // Dispatch(null)
+        //as auth.signout() is not trigerring authstatechange function is app.js so do it manually
+        Dispatch(setCurrentUer(null))
     }
 }

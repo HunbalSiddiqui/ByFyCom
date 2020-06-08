@@ -19,9 +19,9 @@ export class App extends Component {
             //get full data from firestore using uid
             var userSnap = await firestore.collection('users').doc(uid).get()
             var userData = userSnap.data();
-            var {email,username,mobile} = userData
+            var {email,username,mobile,address} = userData
             var userObj = {
-                email,username,mobile
+                email,username,mobile,address
             }
             // set local state
             this.props.setCurrentUser(userObj)

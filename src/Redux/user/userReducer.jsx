@@ -1,4 +1,4 @@
-import { USER_SIGNUP } from "./userConstants";
+import {SET_CURRENT_USER } from "./userConstants";
 
 var initialState = {
     userObj:null
@@ -8,7 +8,7 @@ var initialState = {
 var userReducer = (state=initialState,action)=>{
     var {payload,type} = action
     switch (type) {
-        case USER_SIGNUP:
+        case SET_CURRENT_USER:
             return {
                 ...state,
                 userObj:payload

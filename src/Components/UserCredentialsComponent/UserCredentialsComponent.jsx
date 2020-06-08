@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './UserCredentialsComponent.css'
 import {connect} from 'react-redux'
-import { userSignup } from '../../Redux/user/userActions'
+import { userSignup, userSignin } from '../../Redux/user/userActions'
 export class UserCredentialsComponent extends Component {
     state = {
         username:'',email:'',mobile:'',address:'',password:''
@@ -47,6 +47,16 @@ export class UserCredentialsComponent extends Component {
         userSignup(userObj);
     }
 
+    setUserSignin = (e) =>{
+        e.preventDefault()
+        var {email,password} = this.state;
+        var {userSignin} = this.props;
+        //create user object
+        var userObj = {email,password}
+        //send to user actions
+        userSignin(userObj)
+    }
+
     handleFormInput = (e) => {
         var {name,value} = e.target;
         this.setState((prevState)=>({
@@ -67,13 +77,13 @@ export class UserCredentialsComponent extends Component {
                 </div>
                 <div className="ucr2 flex">
                     <form className="flex-col">
-                        <input onChange={(e)=>{this.handleFormInput(e)}} name='username' value={username} className="input_field" type="text" placeholder="UserName"/>
-                        <input onChange={(e)=>{this.handleFormInput(e)}} name='email' value={email} id="signup_hide" className="input_field" type="text" placeholder="Email"/>
+                        <input onChange={(e)=>{this.handleFormInput(e)}} name='username' value={username} id="signup_hide" className="input_field" type="text" placeholder="UserName"/>
+                        <input onChange={(e)=>{this.handleFormInput(e)}} name='email' value={email}  className="input_field" type="text" placeholder="Email"/>
                         <input onChange={(e)=>{this.handleFormInput(e)}} name='mobile' value={mobile} id="signup_hide" className="input_field" type="number" placeholder="MobileNumber"/>
                         <input onChange={(e)=>{this.handleFormInput(e)}} name='address' value={address} id="signup_hide" className="input_field" type="text" placeholder="Address"/>
                         <input onChange={(e)=>{this.handleFormInput(e)}} name='password' value={password} className="input_field" type="password" placeholder="Password"/>
                         <button id="signin_hide" className="sign_btn pointer"
-                        onClick={(e)=>{this.displaySignupForm(e)}}>Signin</button>
+                        onClick={(e)=>{this.setUserSignin(e)}}>Signin</button>
                         <button id="signup_hide" className="sign_btn pointer"
                         onClick={(e)=>{this.setUserSignup(e)}}>Signup</button>
                     </form>
@@ -83,6 +93,7 @@ export class UserCredentialsComponent extends Component {
     }
 }
 var actions = {
-    userSignup : userSignup
+    userSignup : userSignup,
+    userSignin : userSignin,
 }
 export default connect(null,actions)(UserCredentialsComponent)
