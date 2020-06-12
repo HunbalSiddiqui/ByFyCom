@@ -124,7 +124,7 @@ export class Home extends Component {
                     </div>
                     <div className="homeNext flex-col"><p className="Nextpg para3 lighter pointer"><i className="fas fa-chevron-right" id='next'
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
-                    <div className="tagLine flex white"><p>- Shoes -</p></div>
+                    <div className="tagLine flex white para2"><p>- Shoes -</p></div>
                 </div>
             </div>
 
@@ -140,7 +140,7 @@ export class Home extends Component {
                     </div>
                     <div className="homeNext flex-col"><p className="Nextpg para3 lighter pointer" id='next'><i className="fas fa-chevron-right" id="next"
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
-                    <div className="tagLine flex white"><p>- T.Shirts(Men) -</p></div>
+                    <div className="tagLine flex white para2"><p>- T.Shirts(Men) -</p></div>
                 </div>
             </div>
 
@@ -156,7 +156,7 @@ export class Home extends Component {
                     </div>
                     <div className="homeNext flex-col"><p className="Nextpg para3 lighter pointer" id='next'><i className="fas fa-chevron-right white" id='next'
                     onClick={(e)=>{this.changeBackground(e.target.id)}}></i></p></div>
-                    <div className="tagLine flex white"><p>- T.Shirts(Women) -</p></div>
+                    <div className="tagLine flex white para2"><p>- T.Shirts(Women) -</p></div>
                 </div>
             </div>
 

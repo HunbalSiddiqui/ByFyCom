@@ -5,12 +5,10 @@ body{
   /* overflow-x: hidden; */
   /* overflow-y: hidden; */
 }
-.html{
-  font-size: 62.5%;
-} 
+
 .home_container1{
     display: grid;
-    grid-template-columns:100vwvw;
+    grid-template-columns:100vw;
     grid-template-rows: 100vh;
     background-image: url(./imgs/shoes.jpg);
     background-size: 100% 100%,cover;
@@ -50,7 +48,7 @@ body{
 
 .shopnow1{
     border-radius: 100%;
-    width: 5rem;height: 5rem;
+    width: 10rem;height: 10rem;
     background-color: transparent;border: 1px solid white;
     color: whitesmoke;
 }

@@ -1,0 +1,24 @@
+/* .html{
+    font-size: 32.5%;
+}  */
+.product_container{
+    display: grid;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: minmax(100vh,min-content);
+    grid-template-areas: '. product_wrapper .';
+}
+.product_wrapper{
+    grid-area: product_wrapper;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 10vh minmax(90vh,min-content);
+    grid-template-areas: 'product_nav_area'
+                         'products_area';
+}
+.product_nav_area{
+    grid-area: product_nav_area;
+}
+.products_area{
+    grid-area: products_area;
+}

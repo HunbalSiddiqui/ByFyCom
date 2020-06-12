@@ -3,9 +3,9 @@
 }
 body{
 overflow-x: hidden;
-overflow-y: hidden;
+/* overflow-y: hidden; */
 }
-.html{
+html{
 font-size: 62.5%;
 } 
 
