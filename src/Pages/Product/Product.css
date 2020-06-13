@@ -9,7 +9,7 @@
 }
 .product_wrapper{
     grid-area: product_wrapper;
-    background-color: red;
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: 90vw;
     grid-template-rows: 10vh minmax(90vh,min-content);
