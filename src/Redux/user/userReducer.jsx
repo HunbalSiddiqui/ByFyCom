@@ -1,7 +1,8 @@
-import {SET_CURRENT_USER } from "./userConstants";
+import {SET_CURRENT_USER, ADD_TO_CART } from "./userConstants";
 
 var initialState = {
-    userObj:null
+    userObj:null,
+    cart:null
 }
 
 
@@ -13,7 +14,11 @@ var userReducer = (state=initialState,action)=>{
                 ...state,
                 userObj:payload
             }
-    
+        case ADD_TO_CART:
+            return{
+                ...state,
+                cart:payload
+            }
         default:
             return state;
     }

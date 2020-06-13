@@ -1,5 +1,5 @@
 import { serverTimestamp, firestore, auth } from "../../Firebase/Firebase";
-import { SET_CURRENT_USER } from "./userConstants";
+import { SET_CURRENT_USER, ADD_TO_CART } from "./userConstants";
 
 export var setCurrentUer=(userObj)=>{
     return{
@@ -45,4 +45,16 @@ export var userSignout=()=>{
         //as auth.signout() is not trigerring authstatechange function is app.js so do it manually
         Dispatch(setCurrentUer(null))
     }
+}
+
+
+
+export var addToCart = (productObj) => {
+    return async(Dispatch)=>{
+        Dispatch({
+            type:ADD_TO_CART,
+            payload:productObj
+        })        
+    }
+
 }

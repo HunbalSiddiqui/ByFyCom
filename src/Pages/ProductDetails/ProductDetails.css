@@ -1,0 +1,54 @@
+.productDetails_cont{
+    display: grid;
+    grid-template-columns: minmax(5vw,1fr) 90vw minmax(5vw,1fr);
+    grid-template-rows: 100vh;
+    grid-template-areas: '. productDetails_wrapper .';
+}
+.productDetails_wrapper{
+    grid-area: productDetails_wrapper;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 'productDetails_navarea'
+                         'productDetails_det'
+                         'productDetails_footer';
+}
+.productDetails_navarea{
+    grid-area: productDetails_navarea;
+}
+.productDetails_det{
+    grid-area: productDetails_det;
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: 80vh;
+}
+.productDetails_det_img{
+    border-right: 1px solid black;
+}
+.productDetails_det_details{
+    margin: auto;   
+}
+.productDetails_det_details h1{
+    margin-bottom: 5%;
+}
+.productDetails_footer{
+    grid-area: productDetails_footer;
+    /* background-color: black; */
+}
+
+.qt_width{
+    width: 30%;
+    border: 0.1px solid black;
+    margin-bottom: 5%;
+    margin-left: 2%;
+}
+
+.addtocart_btn{
+    padding: 2rem 4rem;
+    background-color: white;
+    border: 0.1px solid black;
+}
+.addtocart_btn:hover{
+    border: 1px solid black;
+}
