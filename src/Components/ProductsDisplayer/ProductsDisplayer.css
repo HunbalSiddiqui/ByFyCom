@@ -4,11 +4,12 @@
 .product_displayer_cont{
     /* overflow-x: hidden; */
     width: 100%;
-    height: min-content;
+    height: 100%;
     display: grid;
     grid-column-gap: 5rem;
+    grid-row-gap: 5rem;
     grid-template-columns: repeat(auto-fit,minmax(30rem,min-content));
-    grid-template-rows: minmax(90vh,min-content);
+    grid-template-rows: minmax(30vh,min-content);
 }
 .product_displayer_box{
     width: 30rem;
