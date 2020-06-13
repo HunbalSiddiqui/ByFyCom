@@ -41,7 +41,7 @@ export class App extends Component {
           <Route path='/' component={Home} exact/>  
           <Route path='/Contact' component={Contact}/>  
           <Route path='/Credentials' component={Credentials}/>  
-          <Route path='/Product:uid' component={Product}/>  
+          <Route path='/Product/:uid' component={Product}/>  
         </Switch>        
       </div>
     )
