@@ -76,7 +76,8 @@ function ProductDetails(props) {
                                 <input className="qt_width para2" type="number" name="" id=""  value={stateQt}
                                 onChange={(e)=>{setQt(e.target.value)}}/><br></br>
                                 {stateQt>0 ?
-                                    <button className="addtocart_btn pointer">Add To Cart</button>
+                                    <button className="addtocart_btn pointer"
+                                    onClick={()=>{addToCart()}}>Add To Cart</button>
                                         :
                                     null
                                 }
@@ -95,6 +96,7 @@ var actions = {
     addToCart:addToCart
 }
 var mapStateToProps = (state) => {
+    console.log(state.userReducer)
     return {
 
     }

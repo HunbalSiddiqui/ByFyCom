@@ -1,0 +1,25 @@
+.checkOut_cont{
+    display: grid;
+    grid-template-columns: minmax(5vw,1fr) 90vw minmax(5vw,1fr);
+    grid-template-rows: minmax(100vh,min-content);
+    grid-template-areas: '. checkOut_wrapper .';
+}
+.checkOut_wrapper{
+    grid-area: checkOut_wrapper;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 10vh 15vh minmax(65vh,min-content) 10vh;
+}
+.checkOut_nav_area{
+
+}
+.checkOut_headings{
+
+}
+.shopping_bag{
+
+}
+.checkOut_footer{
+    border-top: 1px solid black;
+}

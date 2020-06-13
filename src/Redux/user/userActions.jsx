@@ -50,6 +50,7 @@ export var userSignout=()=>{
 
 
 export var addToCart = (productObj) => {
+    console.log(productObj)
     return async(Dispatch)=>{
         Dispatch({
             type:ADD_TO_CART,

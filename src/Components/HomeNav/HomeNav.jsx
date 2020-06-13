@@ -31,7 +31,7 @@ function HomeNav(props) {
                 }
                  {
                     props.currentUser ? 
-                    <div className="tabLink pointer flex"><Link to='/Credentials'><p className="black para2" id='cart' onClick={(e)=>{setActive(e)}} > <i className="fas fa-shopping-cart"></i></p></Link></div>
+                    <div className="tabLink pointer flex"><Link to='/Cart'><p className="black para2" id='cart' onClick={(e)=>{setActive(e)}} > <i className="fas fa-shopping-cart"></i></p></Link></div>
                     :null 
                 }
         </div>

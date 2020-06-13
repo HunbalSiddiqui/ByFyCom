@@ -9,6 +9,7 @@ import { auth, firestore } from './Firebase/Firebase'
 import { connect } from 'react-redux'
 import { setCurrentUer } from './Redux/user/userActions'
 import ProductDetails from './Pages/ProductDetails/ProductDetails'
+import CheckOut from './Pages/CheckOut/CheckOut'
 export class App extends Component {
 
   componentDidMount() {
@@ -44,6 +45,8 @@ export class App extends Component {
           <Route path='/Credentials' component={Credentials}/>  
           <Route path='/Product/:uid' component={Product} exact/>  
           <Route path='/Product/:uid/:uid' component={ProductDetails}/>  
+          <Route path='/Cart' component={CheckOut}/>  
+          
         </Switch>        
       </div>
     )
