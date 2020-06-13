@@ -45,7 +45,7 @@ export class ProductsDisplayer extends Component {
                     </div>`)
                     //set an on click function for all the products
                     document.querySelector("#"+name).addEventListener('click',()=>{
-                        console.log(name)
+                        this.props.history.push(`/Product/shoes/${name}`)
                     })
                 })
             });
@@ -80,7 +80,7 @@ export class ProductsDisplayer extends Component {
                     </div>`)
                     //set an on click function for all the products
                     document.querySelector("#"+name).addEventListener('click',()=>{
-                        console.log(name)
+                        this.props.history.push(`/Product/mentshirts/${name}`)
                     })
                 })
             });
@@ -115,7 +115,7 @@ export class ProductsDisplayer extends Component {
                             </div>`)
                             //set an on click function for all the products
                             document.querySelector("#"+name).addEventListener('click',()=>{
-                                console.log(name)
+                                this.props.history.push(`/Product/womentshirts/${name}`)
                             })
                         })
                     });
