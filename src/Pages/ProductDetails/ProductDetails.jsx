@@ -53,8 +53,9 @@ function ProductDetails(props) {
     }//hi
 
     var addToCart = () => {
+        var price = statePrice*stateQt;
         var productObj = {
-            name:stateName,price:statePrice,qt:stateQt
+            name:stateName,price:statePrice,qt:stateQt,price
         }
         props.addToCart(productObj)
     }
@@ -96,9 +97,9 @@ var actions = {
     addToCart:addToCart
 }
 var mapStateToProps = (state) => {
-    console.log(state.userReducer)
+    // console.log(state.userReducer)
     return {
-
+        
     }
 }
 export default connect(mapStateToProps,actions)(ProductDetails)

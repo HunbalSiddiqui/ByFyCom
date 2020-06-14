@@ -4,6 +4,10 @@ import { firebaseStorage, firestore } from '../../Firebase/Firebase';
 import {withRouter} from 'react-router-dom'
 export class ProductsDisplayer extends Component {
 
+    state = {
+        stateName : null
+    }
+
     componentDidMount() {
         var {uid} = this.props.match.params;
         switch (uid) {
@@ -29,14 +33,17 @@ export class ProductsDisplayer extends Component {
             //get image through download url
             check.items.forEach( element => {
                 var name = element.name.split('.')[0];
+                this.setState((prevState)=>({
+                    stateName : name  
+                }))
                 element.getDownloadURL().then(async(url)=>{
                     //fetch price
                     var productObj = await firestore.collection('shoes').doc(name).get();
                     //display products
                     product_displayer_cont.insertAdjacentHTML('beforeend',
                     `<div class="product_displayer_box pointer" id="${name}"  >
-                        <div class="product_image">
-                            <img class="product_image_setting" src=${url} alt="p"/>
+                        <div class="product_image" >
+                            <img class="product_image_setting" src=${url} alt="p" id="${name}"/>
                         </div>
                         <div class="product_price flex-col">
                             <h1 class="para2">${name}</h1>
@@ -44,9 +51,9 @@ export class ProductsDisplayer extends Component {
                         </div>
                     </div>`)
                     //set an on click function for all the products
-                    document.querySelector("#"+name).addEventListener('click',()=>{
-                        this.props.history.push(`/Product/shoes/${name}`)
-                    })
+                    // document.querySelector("#"+name).addEventListener('click',()=>{
+                    //     this.props.history.push(`/Product/shoes/${name}`)
+                    // })
                 })
             });
         } catch (error) {
@@ -64,6 +71,9 @@ export class ProductsDisplayer extends Component {
             //get image through download url
             check.items.forEach( element => {
                 var name = element.name.split('.')[0];
+                this.setState((prevState)=>({
+                    stateName : name  
+                }))
                 element.getDownloadURL().then(async(url)=>{
                     //fetch price
                     var productObj = await firestore.collection('t-shirts(men)').doc(name).get();
@@ -99,6 +109,9 @@ export class ProductsDisplayer extends Component {
                     //get image through download url
                     check.items.forEach( element => {
                         var name = element.name.split('.')[0];
+                        this.setState((prevState)=>({
+                            stateName : name  
+                        }))
                         element.getDownloadURL().then(async(url)=>{
                             //fetch price
                             var productObj = await firestore.collection('t-shirts(women)').doc(name).get();
@@ -125,11 +138,24 @@ export class ProductsDisplayer extends Component {
     }
 
 
+    checkForClickedId = async(e) =>{
+        if(e.target.id)
+        {
+            this.props.history.push(`/Product/shoes/${this.state.stateName}`)
+        }
+    }
+
     render() {
         return (
-            <div className="product_displayer_cont flex">
-            </div>
-        )
+            this.state.stateName ?
+                    <div className="product_displayer_cont flex"
+                    onClick={(e)=>{this.checkForClickedId(e)}}>
+                    </div>
+                    :
+                    <div className="product_displayer_cont flex">
+                        <h1>LOADING</h1>
+                    </div>
+        )   
     }
 }
 

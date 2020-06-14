@@ -2,7 +2,8 @@ import {SET_CURRENT_USER, ADD_TO_CART } from "./userConstants";
 
 var initialState = {
     userObj:null,
-    cart:[]
+    cart:[],
+    totalPrice:0
 }
 
 
@@ -15,10 +16,10 @@ var userReducer = (state=initialState,action)=>{
                 userObj:payload
             }
         case ADD_TO_CART:
-            console.log(payload)
             return{
                 ...state,
-                cart : [...state.cart,payload]
+                cart : [...state.cart,payload],
+                totalPrice : state.totalPrice+payload.price
             }
         default:
             return state;
