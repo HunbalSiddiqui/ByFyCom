@@ -14,7 +14,6 @@ function HomeNav(props) {
     }    
 
     var setActive = (e) =>{
-        console.log("active class wait.")
         // document.querySelector('#'+e.target.id).style.color='white'
     }
 

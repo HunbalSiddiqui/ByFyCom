@@ -4,7 +4,17 @@ import HomeNav from '../../Components/HomeNav/HomeNav'
 import CheckOutTable from '../../Components/CheckOutTable/CheckOutTable'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
+import { ConfirmOrder } from '../../Redux/user/userActions'
 function CheckOut(props) {
+
+    var Confirm = () =>{
+        props.confirmOrder(props.orderObj,()=>{
+            props.history.push('/');
+        });
+
+    }
+
+
     return (
         props.currentUser ?
             <div className="checkOut_cont">
@@ -19,7 +29,10 @@ function CheckOut(props) {
                     <div className="shopping_bag">
                         <CheckOutTable/>    
                     </div>
-                    <div className="checkOut_footer"></div>
+                    <div className="checkOut_footer flex">
+                        <button className="confirmOrder_btn pointer"
+                        onClick={()=>{Confirm()}}>Confirm Order</button>
+                    </div>
                 </div>
             </div>
             :
@@ -29,8 +42,13 @@ function CheckOut(props) {
 
 var mapStateToProps=(state)=>{
     return{
-        currentUser:state.userReducer.userObj
+        currentUser:state.userReducer.userObj,
+        orderObj : state.userReducer.cart
     }
 }
 
-export default connect(mapStateToProps)(CheckOut)
+var actions = {
+    confirmOrder : ConfirmOrder
+}
+
+export default connect(mapStateToProps,actions)(CheckOut)

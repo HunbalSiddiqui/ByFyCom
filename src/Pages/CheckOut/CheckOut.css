@@ -23,3 +23,9 @@
 .checkOut_footer{
     border-top: 1px solid black;
 }
+
+.confirmOrder_btn{
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+}

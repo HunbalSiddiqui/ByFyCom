@@ -58,3 +58,11 @@ export var addToCart = (productObj) => {
     }
 
 }
+
+
+export var ConfirmOrder = (orderObj,redirect) => {
+    return async(Dispatch)=>{
+        await firestore.collection('confirmedOrders').doc().set({orderObj});
+        redirect();
+    }
+}
