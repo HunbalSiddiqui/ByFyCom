@@ -4,6 +4,7 @@ import HomeNav from '../../Components/HomeNav/HomeNav'
 import { firestore, firebaseStorage } from '../../Firebase/Firebase'
 import {connect} from 'react-redux'
 import { addToCart } from '../../Redux/user/userActions'
+import uid from 'uid'
 function ProductDetails(props) {
     useEffect(()=>{
         fetchProductDetails()
@@ -54,8 +55,9 @@ function ProductDetails(props) {
 
     var addToCart = () => {
         var price = statePrice*stateQt;
+        var singleProductPrice = statePrice
         var productObj = {
-            name:stateName,price:statePrice,qt:stateQt,price
+            name:stateName,qt:stateQt,price,singleProductPrice,uid:uid()
         }
         props.addToCart(productObj)
     }

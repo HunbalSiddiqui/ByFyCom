@@ -9,16 +9,16 @@
     background-color: whitesmoke;
     display: grid;
     grid-template-columns: 90vw;
-    grid-template-rows: 10vh 15vh minmax(65vh,min-content) 10vh;
+    grid-template-rows: 10vh minmax(15vh,min-content) minmax(65vh,min-content) 10vh;
 }
-.checkOut_nav_area{
+/* .checkOut_nav_area{
 
 }
 .checkOut_headings{
 
-}
+} */
 .shopping_bag{
-
+    background-color: red;
 }
 .checkOut_footer{
     border-top: 1px solid black;

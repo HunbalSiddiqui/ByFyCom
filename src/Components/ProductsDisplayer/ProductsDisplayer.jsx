@@ -81,7 +81,7 @@ export class ProductsDisplayer extends Component {
                     product_displayer_cont.insertAdjacentHTML('beforeend',
                     `<div class="product_displayer_box pointer" id="${name}"  >
                         <div class="product_image">
-                            <img class="product_image_setting" src=${url} alt="p"/>
+                            <img class="product_image_setting" src=${url} alt="p" id="${name}"/>
                         </div>
                         <div class="product_price flex-col">
                             <h1 class="para2">${name}</h1>
@@ -89,9 +89,9 @@ export class ProductsDisplayer extends Component {
                         </div>
                     </div>`)
                     //set an on click function for all the products
-                    document.querySelector("#"+name).addEventListener('click',()=>{
-                        this.props.history.push(`/Product/mentshirts/${name}`)
-                    })
+                    // document.querySelector("#"+name).addEventListener('click',()=>{
+                    //     this.props.history.push(`/Product/mentshirts/${name}`)
+                    // })
                 })
             });
         } catch (error) {
@@ -119,7 +119,7 @@ export class ProductsDisplayer extends Component {
                             product_displayer_cont.insertAdjacentHTML('beforeend',
                             `<div class="product_displayer_box pointer" id="${name}"  >
                                 <div class="product_image">
-                                    <img class="product_image_setting" src=${url} alt="p"/>
+                                    <img class="product_image_setting" src=${url} alt="p" id="${name}"/>
                                 </div>
                                 <div class="product_price flex-col">
                                     <h1 class="para2">${name}</h1>
@@ -127,9 +127,9 @@ export class ProductsDisplayer extends Component {
                                 </div>
                             </div>`)
                             //set an on click function for all the products
-                            document.querySelector("#"+name).addEventListener('click',()=>{
-                                this.props.history.push(`/Product/womentshirts/${name}`)
-                            })
+                            // document.querySelector("#"+name).addEventListener('click',()=>{
+                            //     this.props.history.push(`/Product/womentshirts/${name}`)
+                            // })
                         })
                     });
                 } catch (error) {
@@ -141,7 +141,7 @@ export class ProductsDisplayer extends Component {
     checkForClickedId = async(e) =>{
         if(e.target.id)
         {
-            this.props.history.push(`/Product/shoes/${this.state.stateName}`)
+            this.props.history.push(`/Product/shoes/${e.target.id}`)
         }
     }
 

@@ -1,5 +1,5 @@
 import { serverTimestamp, firestore, auth } from "../../Firebase/Firebase";
-import { SET_CURRENT_USER, ADD_TO_CART } from "./userConstants";
+import { SET_CURRENT_USER, ADD_TO_CART} from "./userConstants";
 
 export var setCurrentUer=(userObj)=>{
     return{
